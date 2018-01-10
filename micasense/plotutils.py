@@ -39,7 +39,7 @@ def plotwithcolorbar(img, title=''):
 
 def subplotwithcolorbar(rows, cols, images, titles=None, fig_size=None):
     ''' Plot a set of images in subplots '''
-    fig, axes = plt.subplots(rows, cols, figsize=fig_size)
+    fig, axes = plt.subplots(rows, cols, figsize=fig_size, squeeze=False)
     for i in range(cols*rows):
         column = int(i%cols)
         row = int(i/cols)
